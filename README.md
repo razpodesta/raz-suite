@@ -1,6 +1,6 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/user-attachments/assets/91c78479-5091-4963-83bd-d75d506d860d" alt="Meame Project Banner" width="800"/>
-  <h1>Meame: La Suite de Orquestación Creativa de Élite</h1>
+  <img src="https://raw.githubusercontent.com/user-attachments/assets/91c78479-5091-4963-83bd-d75d506d860d" alt="RazSuite Project Banner" width="800"/>
+  <h1>RazSuite: La Suite de Orquestación Creativa de Élite</h1>
   <p>
     <strong>Una arquitectura soberana para forjar, gestionar y optimizar ecosistemas digitales de alta conversión, impulsada por IA y principios de ingeniería de software de élite.</strong>
   </p>
@@ -14,7 +14,7 @@
 
 ---
 
-`meame` no es solo una aplicación web. Es una plataforma holística diseñada para orquestar el ciclo de vida completo de campañas de marketing digital, desde la concepción creativa hasta el análisis de conversión post-lanzamiento. Su núcleo es un **Centro de Comando de Desarrollador (DCC)** que integra una suite de herramientas soberanas, cada una con una misión específica, para crear, gestionar y optimizar activos y experiencias a una escala sin precedentes.
+`RazSuite` no es solo una aplicación web. Es una plataforma holística diseñada para orquestar el ciclo de vida completo de campañas de marketing digital, desde la concepción creativa hasta el análisis de conversión post-lanzamiento. Su núcleo es un **Centro de Comando de Desarrollador (DCC)** que integra una suite de herramientas soberanas, cada una con una misión específica, para crear, gestionar y optimizar activos y experiencias a una escala sin precedentes.
 
 ## 📜 Filosofía Raíz: "Arquitectura por Manifiesto"
 
@@ -37,7 +37,7 @@ Nuestra calidad se cimienta sobre **Los 8 Pilares de la Calidad de Código de É
 
 ## 🏛️ Arquitectura Holística del Ecosistema
 
-`meame` está diseñado como un sistema distribuido de dominios especializados que colaboran para ofrecer una plataforma unificada. El DCC actúa como el cerebro central, orquestando los servicios de datos, contenido y IA.
+`RazSuite` está diseñado como un sistema distribuido de dominios especializados que colaboran para ofrecer una plataforma unificada. El DCC actúa como el cerebro central, orquestando los servicios de datos, contenido y IA.
 
 ```mermaid
 graph TD
@@ -45,7 +45,7 @@ graph TD
         A[Stratega / Desarrollador]
     end
 
-    subgraph "Plataforma Meame (Next.js)"
+    subgraph "Plataforma RazSuite (Next.js)"
         B(Centro de Comando de Desarrollador - DCC)
         C(Portal Público / Landing Pages)
     end
@@ -70,8 +70,8 @@ graph TD
     style B fill:#3b82f6,stroke:#fff,stroke-width:2px,color:#fff
     style C fill:#10b981,stroke:#fff,stroke-width:2px,color:#fff
 
-🛠️ La Suite Meame: Un Desglose Granular
-meame está compuesto por una suite de dominios interconectados, cada uno con un propósito y un potencial únicos.
+🛠️ La Suite RazSuite: Un Desglose Granular
+RazSuite está compuesto por una suite de dominios interconectados, cada uno con un propósito y un potencial únicos.
 
 🎨 La Forja Creativa (SDC) - Suite de Diseño de Campañas
 Es el epicentro del ecosistema. Un asistente visual de 6 pasos que transforma la estrategia en bruto en campañas de alta conversión.
@@ -118,7 +118,7 @@ graph TD
     subgraph BAVI - Arquitectura de Datos
         A(Supabase DB) -- Metadatos, Taxonomía, Propiedad --> B{Manifiestos BAVI}
         C(Cloudinary) -- Almacenamiento Binario, Optimización --> B
-        B -- SSoT de Activos --> D(Ecosistema Meame)
+        B -- SSoT de Activos --> D(Ecosistema RazSuite)
     end
     D -- Consume vía --> E[AssetExplorer UI]
     style A fill:#3ecf8e,color:#fff
