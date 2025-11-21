@@ -1,0 +1,36 @@
+{
+  "promptId": "clyd1q2w5000212mnfg67hijk",
+  "userId": "f125b449-c1cd-4190-abc4-3d5d5e3ddca4",
+  "workspaceId": "59105ea4-6d79-414a-9e26-24c91d258fcc",
+  "title": "Mascota IA TEMEO - Concepto 01",
+  "status": "pending_generation",
+  "aiService": "ideogram",
+  "keywords": [
+    "temeo",
+    "ia",
+    "mascota",
+    "robot",
+    "personaje",
+    "3d",
+    "futurista"
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "basePromptText": "Una encantadora e inteligente mascota robot llamada TEMEO, estilo personaje 3D de Pixar...",
+      "fullPromptText": "Una encantadora e inteligente mascota robot llamada TEMEO, estilo personaje 3D de Pixar... 3d render, cinematic, photorealistic, aspect ratio 1x1",
+      "parameters": { "styleType": "DESIGN", "aspectRatio": "1x1" },
+      "createdAt": "2025-10-01T18:00:00.000Z"
+    }
+  ],
+  "tags": {
+    "ai": "ideo",
+    "sty": "ill",
+    "fmt": "1x1",
+    "typ": "chr",
+    "sbj": "rob"
+  },
+  "baviAssetIds": [],
+  "createdAt": "2025-10-01T18:00:00.000Z",
+  "updatedAt": "2025-10-01T18:00:00.000Z"
+}

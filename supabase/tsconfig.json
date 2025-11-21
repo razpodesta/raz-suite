@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "noEmit": true,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "strict": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "https://esm.sh/react@18.2.0",
+    "allowImportingTsExtensions": true,
+    "paths": {
+      "@/*": ["./functions/_shared/*"]
+    }
+  },
+  "include": ["./functions/**/*"],
+  "exclude": ["node_modules"]
+}

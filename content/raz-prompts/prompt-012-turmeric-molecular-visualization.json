@@ -1,0 +1,28 @@
+{
+  "promptId": "clyd1q2w4000112mna2b34cde",
+  "userId": "f125b449-c1cd-4190-abc4-3d5d5e3ddca4",
+  "workspaceId": "59105ea4-6d79-414a-9e26-24c91d258fcc",
+  "title": "Visualización Molecular de la Sinergia de la Cúrcuma",
+  "status": "generated",
+  "aiService": "midjourney",
+  "keywords": ["curcuma", "molecular", "sinergia", "ciencia", "visualizacion"],
+  "versions": [
+    {
+      "version": 1,
+      "basePromptText": "A hyper-realistic 3D molecular visualization of curcumin and piperine molecules interacting...",
+      "fullPromptText": "A hyper-realistic 3D molecular visualization of curcumin and piperine molecules interacting... aspect ratio 16:9, photorealistic, 8k, ultra-high detail, sharp focus",
+      "parameters": { "aspectRatio": "16x9" },
+      "createdAt": "2025-09-22T09:00:00.000Z"
+    }
+  ],
+  "tags": {
+    "ai": "mj",
+    "sty": "pht",
+    "fmt": "16x9",
+    "typ": "sci",
+    "sbj": "abs"
+  },
+  "baviAssetIds": ["i-ing-turmeric-synergy-01"],
+  "createdAt": "2025-09-22T09:00:00.000Z",
+  "updatedAt": "2025-09-22T09:00:00.000Z"
+}

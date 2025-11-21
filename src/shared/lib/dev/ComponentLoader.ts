@@ -1,0 +1,87 @@
+// RUTA: src/shared/lib/dev/ComponentLoader.ts
+/**
+ * @file ComponentLoader.ts
+ * @description Módulo de servicio SOBERANO para la carga dinámica de componentes.
+ *              v8.0.0 (Holistic Observability & Contract Integrity): Refactorizado para
+ *              cumplir con el contrato del logger soberano v20+ y enriquecido con
+ *              una trazabilidad de ejecución hiper-granular.
+ * @version 8.0.0
+ * @author RaZ Podestá - MetaShark Tech
+ */
+import "server-only";
+import type React from "react";
+
+import { getFallbackProps } from "@/components/features/dev-tools/utils/component-props";
+import {
+  getComponentByName,
+  type ComponentRegistryEntry,
+} from "@/shared/lib/dev/ComponentRegistry";
+import { logger } from "@/shared/lib/logging";
+
+interface ComponentLoadResult {
+  ComponentToRender: React.ComponentType<Record<string, unknown>>;
+  componentProps: Record<string, unknown>;
+  entry: ComponentRegistryEntry;
+}
+
+export async function loadComponentAndProps(
+  componentName: string
+): Promise<ComponentLoadResult> {
+  const traceId = logger.startTrace(`loadComponentAndProps:${componentName}`);
+  const groupId = logger.startGroup(
+    `[Loader v8.0] Orquestando carga de "${componentName}"...`
+  );
+
+  try {
+    logger.traceEvent(traceId, "Obteniendo entrada del registro...");
+    const entry = getComponentByName(componentName);
+    if (!entry) {
+      throw new Error(
+        `Componente "${componentName}" no encontrado en ComponentRegistry.`
+      );
+    }
+    logger.traceEvent(traceId, "Entrada del registro obtenida con éxito.");
+
+    logger.traceEvent(traceId, "Generando props de fallback...");
+    const componentProps = getFallbackProps(componentName);
+    logger.traceEvent(traceId, "Props de fallback generadas.");
+
+    const dynamicPath = `@/` + entry.componentPath.replace("@/", "");
+    logger.traceEvent(
+      traceId,
+      `Importando dinámicamente desde: ${dynamicPath}`
+    );
+    const componentModule = await import(dynamicPath);
+
+    const ComponentToRender =
+      componentModule.default ||
+      componentModule[componentName] ||
+      componentModule[entry.dictionaryKey] ||
+      componentModule[Object.keys(componentModule)[0]];
+
+    if (!ComponentToRender) {
+      throw new Error(
+        `Exportación por defecto o nombrada no encontrada en "${entry.componentPath}"`
+      );
+    }
+    logger.traceEvent(traceId, "Módulo del componente resuelto y cargado.");
+
+    logger.success(
+      `[Loader] Componente "${componentName}" listo para renderizar.`
+    );
+    return { ComponentToRender, componentProps, entry };
+  } catch (error) {
+    const errorMessage =
+      error instanceof Error ? error.message : "Error desconocido.";
+    logger.error(`[Loader] Fallo crítico al cargar "${componentName}".`, {
+      error: errorMessage,
+      traceId,
+    });
+    throw new Error(
+      `No se pudo orquestar la carga del componente: ${errorMessage}`
+    );
+  } finally {
+    logger.endGroup(groupId);
+    logger.endTrace(traceId);
+  }
+}

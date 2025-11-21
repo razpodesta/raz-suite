@@ -1,0 +1,26 @@
+{
+  "it-IT": {
+    "razPromptsHomePage": {
+      "createPromptTab": "Crea Prompt",
+      "viewVaultTab": "Vedi Bóveda"
+    }
+  },
+  "es-ES": {
+    "razPromptsHomePage": {
+      "createPromptTab": "Crear Prompt",
+      "viewVaultTab": "Ver Bóveda"
+    }
+  },
+  "en-US": {
+    "razPromptsHomePage": {
+      "createPromptTab": "Create Prompt",
+      "viewVaultTab": "View Vault"
+    }
+  },
+  "pt-BR": {
+    "razPromptsHomePage": {
+      "createPromptTab": "Criar Prompt",
+      "viewVaultTab": "Ver Cofre"
+    }
+  }
+}

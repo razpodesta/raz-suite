@@ -1,0 +1,27 @@
+{
+  // ========================================================================
+  // PILAR 1: SOBERANÍA DE DENO (Frontera Inmutable)
+  // Visión: Activa la extensión de Deno y le ordena operar EXCLUSIVAMENTE
+  // dentro del directorio de las funciones de Supabase.
+  // ========================================================================
+  "deno.enable": true,
+  "deno.lint": true,
+  "deno.unstable": [],
+  "deno.importMap": "./supabase/functions/import_map.json",
+  "deno.enablePaths": [
+    "supabase/functions"
+  ],
+
+  // ========================================================================
+  // PILAR 2: INTELIGENCIA DEL ENTORNO Node.js
+  // Visión: Asegura que el resto del proyecto utilice las herramientas
+  // y versiones de TypeScript correctas, gobernadas por Prettier y ESLint.
+  // ========================================================================
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.useFlatConfig": true,
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
